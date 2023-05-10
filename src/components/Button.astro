@@ -1,0 +1,52 @@
+---
+---
+
+<div class="lite text-lg font-bold py-6 px-6 w-full">
+  <button>
+    <slot />
+  </button>
+</div>
+
+<style>
+  .lite {
+    appearance: none;
+    cursor: pointer;
+    position: relative;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    white-space: nowrap;
+    user-select: none;
+    max-width: 100%;
+    flex-shrink: 0;
+    color: inherit;
+    height: 32px;
+    text-shadow: rgba(0, 0, 0, 0.25) 0px 3px 8px;
+    gap: 8px;
+    margin: 0px;
+    font: inherit inherit inherit inherit inherit inherit inherit inherit
+      inherit inherit inherit inherit inherit;
+    transition: border 120ms ease 0s, background-color, color, box-shadow,
+      opacity;
+    border-radius: 999px;
+    padding: 0px 16px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    background: linear-gradient(
+      92.88deg,
+      rgb(69, 94, 181) 9.16%,
+      rgb(86, 67, 204) 43.89%,
+      rgb(103, 63, 215) 64.72%
+    );
+  }
+
+  .lite:hover {
+    color: inherit;
+    text-shadow: rgba(0, 0, 0, 0.56) 0px 3px 12px;
+    box-shadow: rgba(80, 63, 205, 0.5) 0px 1px 40px;
+  }
+</style>

@@ -1,0 +1,49 @@
+---
+import Footer from "../components/Footer.astro";
+const { title } = Astro.props;
+---
+
+<html
+  lang="en"
+  class="overflow-x-hidden break-words bg-gray-700 text-gray-100 [word-break:break-word] [color-scheme:dark] scroll-smooth subpixel-antialiased"
+>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-[#17191e]">
+    <main
+      id="main"
+      class="noise-container relative z-10 flex flex-1 flex-col min-h-screen"
+    >
+      <div class="noise"></div>
+      <slot />
+      <div
+        class="relative flex flex-col justify-center items-center text-center overflow-x-hidden pt-14 pb-40 sm:pt-20 lg:pt-32 px-4"
+      >
+        <Footer />
+      </div>
+    </main>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+  </body>
+</html>
+
+<style is:global>
+  .noise-container {
+    position: relative;
+    isolation: isolate;
+    background-color: #17191e;
+  }
+  .noise {
+    z-index: -20;
+    position: absolute;
+    inset: 0;
+    background-image: url(/assets/noise.webp);
+    opacity: 0.4;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+  }
+</style>

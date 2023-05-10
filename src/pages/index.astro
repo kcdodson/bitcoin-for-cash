@@ -1,0 +1,17 @@
+---
+import Contact from "../components/Contact.astro";
+import Hero from "../components/Hero.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout title="Bitcoin For Cash">
+  <!-- <div
+    class="flex flex-col w-full max-w-5xl min-h-screen justify-center items-center mx-auto gap-8"
+  >
+    <h1 class="text-5xl font-bold text-center">Bitcoin For Chash</h1>
+  </div> -->
+  <Hero />
+  <section class="flex flex-col w-full justify-center items-center mx-auto">
+    <Contact />
+  </section>
+</MainLayout>
